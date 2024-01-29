@@ -1,14 +1,16 @@
+package phone;
+
 /*
-Класс Phone.
-Создайте класс Phone, который содержит переменные number, model и
+Класс phone.Phone.
+Создайте класс phone.Phone, который содержит переменные number, model и
 weight.+
 Создайте три экземпляра этого класса.+
 Выведите на консоль значения их переменных. -
-Добавить в класс Phone методы: receiveCall, имеет один параметр – имя
+Добавить в класс phone.Phone методы: receiveCall, имеет один параметр – имя
 звонящего. Выводит на консоль сообщение “Звонит {name}”. getNumber –
 возвращает номер телефона. Вызвать эти методы для каждого из
 объектов.+
-Добавить конструктор в класс Phone, который принимает на вход три
+Добавить конструктор в класс phone.Phone, который принимает на вход три
 параметра для инициализации переменных класса - number, model и
 weight.+
 Добавить конструктор, который принимает на вход два параметра для
@@ -35,11 +37,10 @@ public class Phone {
         this.weight = weight;
     }
     public  Phone(int number, String model) {
-        this.model = model;
-        this.number = number;
+        this(number, model, 0 );
     }
     public  Phone() {
-
+        this(0,"anime");
     }
     public  void receiveCall(String nameOfIncomingCall) {
     System.out.println("Звонит: " + nameOfIncomingCall);
@@ -47,7 +48,7 @@ public class Phone {
 
     @Override
     public String toString() {
-        return "Phone{" +
+        return "phone.Phone{" +
                 "number = " + number +
                 ", model = '" + model + '\'' +
                 ", weight = " + weight +
